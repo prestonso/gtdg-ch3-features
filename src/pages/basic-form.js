@@ -11,6 +11,16 @@ export default class BasicFormPage extends React.Component {
     city: "",
   }
 
+  handleInputChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
+
+    this.setState({
+      [name]: value,
+    })
+  }
+
   render() {
     return (
       <Layout>
@@ -19,19 +29,39 @@ export default class BasicFormPage extends React.Component {
         <form>
           <label>
             First name
-            <input type="text" name="firstName" />
+            <input
+              type="text"
+              name="firstName"
+              value={this.state.firstName}
+              onChange={this.handleInputChange}
+            />
           </label>
           <label>
             Last name
-            <input type="text" name="lastName" />
+            <input
+              type="text"
+              name="lastName"
+              value={this.state.lastName}
+              onChange={this.handleInputChange}
+            />
           </label>
           <label>
             City
-            <input type="text" name="city" />
+            <input
+              type="text"
+              name="city"
+              value={this.state.city}
+              onChange={this.handleInputChange}
+            />
           </label>
           <label>
             Country
-            <input type="text" name="country" />
+            <input
+              type="text"
+              name="country"
+              value={this.state.country}
+              onChange={this.handleInputChange}
+            />
           </label>
           <button type="submit">Submit</button>
         </form>
