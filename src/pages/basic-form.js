@@ -21,6 +21,14 @@ export default class BasicFormPage extends React.Component {
     })
   }
 
+  handleSubmit = event => {
+    event.preventDefault()
+    alert(`
+      Howdy ${this.state.firstName} ${this.state.lastName}
+      from ${this.state.city}, ${this.state.country}
+    `)
+  }
+
   render() {
     return (
       <Layout>
