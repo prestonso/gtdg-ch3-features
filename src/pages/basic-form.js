@@ -34,7 +34,7 @@ export default class BasicFormPage extends React.Component {
       <Layout>
         <Seo title="Basic form" />
         <h1>Hi from the basic form page</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
             First name
             <input
