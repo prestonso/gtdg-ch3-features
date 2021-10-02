@@ -16,7 +16,25 @@ export default class BasicFormPage extends React.Component {
       <Layout>
         <Seo title="Basic form" />
         <h1>Hi from the basic form page</h1>
-        <p>Welcome to the basic form page</p>
+        <form>
+          <label>
+            First name
+            <input type="text" name="firstName" />
+          </label>
+          <label>
+            Last name
+            <input type="text" name="lastName" />
+          </label>
+          <label>
+            City
+            <input type="text" name="city" />
+          </label>
+          <label>
+            Country
+            <input type="text" name="country" />
+          </label>
+          <button type="submit">Submit</button>
+        </form>
         <Link to="/">Go back to the homepage</Link>
       </Layout>
     )
